@@ -266,6 +266,9 @@ const ScrollBar = defineComponent({
           class: nsVirtualScrollbar.b(),
           style: trackStyle.value,
           onMousedown: withModifiers(clickTrackHandler, ['stop', 'prevent']),
+          onWheel: (e) => {
+            console.log(e)
+          },
         },
         h(
           'div',
